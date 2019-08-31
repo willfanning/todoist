@@ -1,0 +1,27 @@
+Todoist structure:
+public/
+	index.html
+src/
+	__tests__/
+	components/
+		layout/
+	constants/
+		index.js
+	hooks/
+		index.js
+	helpers/
+		index.js
+	App.js
+	firebase.js (firebase config)
+	index.js (wires <App/> to <div class="root">)
+
+firebase.js:
+Get to project at: console.firebase.google.com
+	created a project (todoist), database (projects, tasks, users tables), added web app
+
+firebaseConfig = { 
+	apiKey, authDomain, databaseURL, projectId, storageBucket, messagingSenderId, appId 
+};
+
+
+

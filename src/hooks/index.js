@@ -30,9 +30,7 @@ export const useTasks = selectedProject => {
       setTasks(
         selectedProject === "NEXT_7_DAYS"
           ? newTasks.filter(
-              task =>
-                moment(task.data, "DD-MM-YYYY").diff(moment(), "days") <= 7 &&
-                task.archived === false
+              task => inNext7Days(task.data) && task.archived === false
             )
           : newTasks.filter(task => task.archived === false)
       );
@@ -44,6 +42,9 @@ export const useTasks = selectedProject => {
 
   return { tasks, archivedTasks };
 };
+
+const inNext7Days = task =>
+  moment(task, "DD-MM-YYYY").diff(moment(), "days") <= 7;
 
 export const useProjects = () => {
   const [projects, setProjects] = useState([]);

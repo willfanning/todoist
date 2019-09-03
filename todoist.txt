@@ -28,3 +28,5 @@ GitGuardian warned me that I exposed an API key, thanks GitGuardian
 Added a .env file and put variables in there
 Prefix with REACT_APP_ and react scripts knows to add them to process.env
 
+hooks:
+useEffect watches for changes
